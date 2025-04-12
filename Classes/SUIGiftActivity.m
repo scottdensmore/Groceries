@@ -71,9 +71,10 @@ NSString* const SUIGiftActivityTitleLocalizationKey = @"com.sophiestication.acti
 }
 
 - (void)performActivity {
-	NSURL* URL = [self applicationGiftURL];
-	BOOL result = [[UIApplication sharedApplication] openURL:URL];
-	[self activityDidFinish:result];
+    NSURL* URL = [self applicationGiftURL];
+    [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {
+        [self activityDidFinish:success];
+    }];
 }
 
 #pragma mark - Private

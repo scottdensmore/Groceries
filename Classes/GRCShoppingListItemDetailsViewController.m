@@ -392,7 +392,7 @@
 
 	self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:[self groceryName]
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:nil
 		action:NULL];
 }
@@ -668,29 +668,50 @@
 }
 
 - (void)presentDeleteConfirmationSheet:(id)sender {
-	NSLocale* locale = [NSLocale currentLocale];
-	NSString* groceryTitle = [[[self shoppingListItem] title] quotedStringWithLocale:locale];
-		
-	NSString* sheetTitle = [NSString stringWithFormat:
-		NSLocalizedString(@"DELETE_GROCERY_PROMPT", nil),
-		groceryTitle,
-		[[UIDevice currentDevice] localizedModel]];
-	
-	UIActionSheet* sheet = [[UIActionSheet alloc]
-		initWithTitle:sheetTitle
-		delegate:nil
-		cancelButtonTitle:nil
-		destructiveButtonTitle:nil
-		otherButtonTitles:nil];
-
-	[sheet setDestructiveButtonWithTitle:NSLocalizedString(@"TRASH_BUTTONITEM", nil) block:^() {
-		[self deleteItem:sender];
-	}];
-
-	[sheet setCancelButtonWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil) block:^() {
-	}];
-
-	[sheet showInView:[self view]];
+    NSLocale* locale = [NSLocale currentLocale];
+    NSString* groceryTitle = [[[self shoppingListItem] title] quotedStringWithLocale:locale];
+    
+    NSString* sheetTitle = [NSString stringWithFormat:
+                            NSLocalizedString(@"DELETE_GROCERY_PROMPT", nil),
+                            groceryTitle,
+                            [[UIDevice currentDevice] localizedModel]];
+    
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:sheetTitle
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // Add the destructive button (delete option)
+    UIAlertAction* deleteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"TRASH_BUTTONITEM", nil)
+                                                           style:UIAlertActionStyleDestructive
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             [self deleteItem:sender];
+                                                         }];
+    [alertController addAction:deleteAction];
+    
+    // Add the cancel button
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil)
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:nil];
+    [alertController addAction:cancelAction];
+    
+    // For iPad, you need to set a source for the popover presentation
+    UIPopoverPresentationController *popover = alertController.popoverPresentationController;
+    if (popover) {
+        if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+            popover.barButtonItem = sender;
+        } else if ([sender isKindOfClass:[UIView class]]) {
+            popover.sourceView = [self view];
+            popover.sourceRect = [(UIView *)sender frame];
+        } else {
+            popover.sourceView = [self view];
+            popover.sourceRect = CGRectMake(CGRectGetMidX([self.view bounds]),
+                                            CGRectGetMidY([self.view bounds]),
+                                            0, 0);
+        }
+    }
+    
+    // Present the alert controller
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)presentUnitPickerAnimated:(BOOL)animated {

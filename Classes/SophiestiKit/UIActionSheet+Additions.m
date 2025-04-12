@@ -22,45 +22,45 @@
 // SOFTWARE.
 //
 
-#import "UIActionSheet+Additions.h"
-
-#import <objc/runtime.h>
-
-@implementation UIActionSheet(Additions)
-
-static void* const SUIActionSheetBlocksAssocitatedObjectKey;
-
-- (void)addButtonWithTitle:(NSString*)title block:(void (^)())block {
-	NSMutableArray* blocks = objc_getAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey);
-
-	if(!blocks) {
-		blocks = [NSMutableArray arrayWithCapacity:2];
-		objc_setAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey, blocks, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-	}
-
-	[blocks addObject:[block copy]];
-	[self addButtonWithTitle:title];
-
-	self.delegate = (id)self;
-}
-
-- (void)setCancelButtonWithTitle:(NSString*)title block:(void (^)())block {
-	[self addButtonWithTitle:title block:block];
-	self.cancelButtonIndex = self.numberOfButtons - 1;
-}
-
-- (void)setDestructiveButtonWithTitle:(NSString*)title block:(void (^)())block {
-	[self addButtonWithTitle:title block:block];
-	self.destructiveButtonIndex = self.numberOfButtons - 1;
-}
-
-- (void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-	NSArray* blocks = objc_getAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey);
-
-	if(buttonIndex >= 0 && buttonIndex < blocks.count) {
-        void (^actionBlock)() = [blocks objectAtIndex:buttonIndex];
-        if(actionBlock) { actionBlock(); }
-    }
-}
-
-@end
+//#import "UIActionSheet+Additions.h"
+//
+//#import <objc/runtime.h>
+//
+//@implementation UIActionSheet(Additions)
+//
+//static void* const SUIActionSheetBlocksAssocitatedObjectKey;
+//
+//- (void)addButtonWithTitle:(NSString*)title block:(void (^)())block {
+//	NSMutableArray* blocks = objc_getAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey);
+//
+//	if(!blocks) {
+//		blocks = [NSMutableArray arrayWithCapacity:2];
+//		objc_setAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey, blocks, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//	}
+//
+//	[blocks addObject:[block copy]];
+//	[self addButtonWithTitle:title];
+//
+//	self.delegate = (id)self;
+//}
+//
+//- (void)setCancelButtonWithTitle:(NSString*)title block:(void (^)())block {
+//	[self addButtonWithTitle:title block:block];
+//	self.cancelButtonIndex = self.numberOfButtons - 1;
+//}
+//
+//- (void)setDestructiveButtonWithTitle:(NSString*)title block:(void (^)())block {
+//	[self addButtonWithTitle:title block:block];
+//	self.destructiveButtonIndex = self.numberOfButtons - 1;
+//}
+//
+//- (void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+//	NSArray* blocks = objc_getAssociatedObject(self, &SUIActionSheetBlocksAssocitatedObjectKey);
+//
+//	if(buttonIndex >= 0 && buttonIndex < blocks.count) {
+//        void (^actionBlock)() = [blocks objectAtIndex:buttonIndex];
+//        if(actionBlock) { actionBlock(); }
+//    }
+//}
+//
+//@end

@@ -1,6 +1,6 @@
 // Post.h
 //
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
+// Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,13 +26,16 @@
 
 @interface Post : NSObject
 
-@property (readonly) NSUInteger postID;
-@property (readonly) NSString *text;
+@property (nonatomic, assign) NSUInteger postID;
+@property (nonatomic, strong) NSString *text;
 
-@property (readonly) User *user;
+@property (nonatomic, strong) User *user;
 
-- (id)initWithAttributes:(NSDictionary *)attributes;
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
-+ (void)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block;
++ (NSURLSessionDataTask *)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block;
 
+@end
+
+@interface Post (NSCoding) <NSSecureCoding>
 @end

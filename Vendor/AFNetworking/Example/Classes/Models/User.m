@@ -1,6 +1,6 @@
 // User.m
 //
-// Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
+// Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,77 +21,110 @@
 // THE SOFTWARE.
 
 #import "User.h"
-#import "AFImageRequestOperation.h"
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
+//#import "AFHTTPRequestOperation.h"
+#endif
 
 NSString * const kUserProfileImageDidLoadNotification = @"com.alamofire.user.profile-image.loaded";
 
-#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 @interface User ()
-+ (NSOperationQueue *)sharedProfileImageRequestOperationQueue;
+@property (readwrite, nonatomic, assign) NSUInteger userID;
+@property (readwrite, nonatomic, copy) NSString *username;
+@property (readwrite, nonatomic, copy) NSString *avatarImageURLString;
+
+//#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
+//@property (readwrite, nonatomic, strong) AFHTTPRequestOperation *avatarImageRequestOperation;
+//#endif
 @end
-#endif
 
-@implementation User {
-@private
-    NSString *_avatarImageURLString;
-    AFImageRequestOperation *_avatarImageRequestOperation;
-}
+@implementation User
 
-@synthesize userID = _userID;
-@synthesize username = _username;
-
-- (id)initWithAttributes:(NSDictionary *)attributes {
+- (instancetype)initWithAttributes:(NSDictionary *)attributes {
     self = [super init];
     if (!self) {
         return nil;
     }
     
-    _userID = [[attributes valueForKeyPath:@"id"] integerValue];
-    _username = [attributes valueForKeyPath:@"username"];
-    _avatarImageURLString = [attributes valueForKeyPath:@"avatar_image.url"];
+    self.userID = (NSUInteger)[[attributes valueForKeyPath:@"id"] integerValue];
+    self.username = [attributes valueForKeyPath:@"username"];
+    self.avatarImageURLString = [attributes valueForKeyPath:@"avatar_image.url"];
     
     return self;
 }
 
 - (NSURL *)avatarImageURL {
-    return [NSURL URLWithString:_avatarImageURLString];
+    return [NSURL URLWithString:self.avatarImageURLString];
 }
+
+#pragma mark -
 
 #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 
-@synthesize profileImage = _profileImage;
-
-+ (NSOperationQueue *)sharedProfileImageRequestOperationQueue {
-    static NSOperationQueue *_sharedProfileImageRequestOperationQueue = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedProfileImageRequestOperationQueue = [[NSOperationQueue alloc] init];
-        [_sharedProfileImageRequestOperationQueue setMaxConcurrentOperationCount:8];
-    });
-    
-    return _sharedProfileImageRequestOperationQueue;
-}
+//+ (NSOperationQueue *)sharedProfileImageRequestOperationQueue {
+//    static NSOperationQueue *_sharedProfileImageRequestOperationQueue = nil;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        _sharedProfileImageRequestOperationQueue = [[NSOperationQueue alloc] init];
+//        [_sharedProfileImageRequestOperationQueue setMaxConcurrentOperationCount:8];
+//    });
+//    
+//    return _sharedProfileImageRequestOperationQueue;
+//}
 
 - (NSImage *)profileImage {
-	if (!_profileImage && !_avatarImageRequestOperation) {
-		_avatarImageRequestOperation = [AFImageRequestOperation imageRequestOperationWithRequest:[NSURLRequest requestWithURL:self.avatarImageURL] success:^(NSImage *image) {
-			self.profileImage = image;
-            
-			_avatarImageRequestOperation = nil;
-            
-            [[NSNotificationCenter defaultCenter] postNotificationName:kUserProfileImageDidLoadNotification object:self userInfo:nil];
-		}];
-        
-		[_avatarImageRequestOperation setCacheResponseBlock:^NSCachedURLResponse *(NSURLConnection *connection, NSCachedURLResponse *cachedResponse) {
-			return [[NSCachedURLResponse alloc] initWithResponse:cachedResponse.response data:cachedResponse.data userInfo:cachedResponse.userInfo storagePolicy:NSURLCacheStorageAllowed];
-		}];
-		
-        [[[self class] sharedProfileImageRequestOperationQueue] addOperation:_avatarImageRequestOperation];
-	}
-	
-	return _profileImage;
+    return nil;
+//	if (!_profileImage && !_avatarImageRequestOperation) {
+//        NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:self.avatarImageURL];
+//        [mutableRequest setValue:@"image/*" forHTTPHeaderField:@"Accept"];
+//        AFHTTPRequestOperation *imageRequestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:mutableRequest];
+//        imageRequestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+//        [imageRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, NSImage *responseImage) {
+//            self.profileImage = responseImage;
+//
+//			_avatarImageRequestOperation = nil;
+//
+//            [[NSNotificationCenter defaultCenter] postNotificationName:kUserProfileImageDidLoadNotification object:self userInfo:nil];
+//        } failure:nil];
+//
+//		[imageRequestOperation setCacheResponseBlock:^NSCachedURLResponse *(NSURLConnection *connection, NSCachedURLResponse *cachedResponse) {
+//			return [[NSCachedURLResponse alloc] initWithResponse:cachedResponse.response data:cachedResponse.data userInfo:cachedResponse.userInfo storagePolicy:NSURLCacheStorageAllowed];
+//		}];
+//
+//		_avatarImageRequestOperation = imageRequestOperation;
+//		
+//        [[[self class] sharedProfileImageRequestOperationQueue] addOperation:_avatarImageRequestOperation];
+//	}
+//	
+//	return _profileImage;
 }
 
 #endif
+
+@end
+
+@implementation User (NSCoding)
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeInteger:(NSInteger)self.userID forKey:@"AF.userID"];
+    [aCoder encodeObject:self.username forKey:@"AF.username"];
+    [aCoder encodeObject:self.avatarImageURLString forKey:@"AF.avatarImageURLString"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    self.userID = (NSUInteger)[aDecoder decodeIntegerForKey:@"AF.userID"];
+    self.username = [aDecoder decodeObjectOfClass:[NSString class] forKey:@"AF.username"];
+    self.avatarImageURLString = [aDecoder decodeObjectOfClass:[User class] forKey:@"AF.avatarImageURLString"];
+    
+    return self;
+}
+
++ (BOOL)supportsSecureCoding {
+    return YES;
+}
 
 @end

@@ -232,31 +232,48 @@
 }
 
 - (void)startOver:(id)sender {
-	UIActionSheet* sheet = [[UIActionSheet alloc]
-		initWithTitle:NSLocalizedString(@"SHEETTITLE_RESTART_SHOPPING", nil)
-		delegate:nil
-		cancelButtonTitle:nil
-		destructiveButtonTitle:nil
-		otherButtonTitles:nil];
-
-	sheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-
-	[sheet addButtonWithTitle:NSLocalizedString(@"SHEETBUTTON_UNCHECK_SHOPPINGLIST_ITEMS", nil) block:^() {
-		[self resetCompletedItems:sender];
-	}];
-
-	[sheet setDestructiveButtonWithTitle:NSLocalizedString(@"SHEETBUTTON_DELETE_CHECKED_SHOPPINGLIST_ITEMS", nil) block:^() {
-		[self deleteCompletedItems:sender];
-	}];
-
-	[sheet setCancelButtonWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil) block:^() {
-	}];
-
-	if(sender == self.startOverButtonItem) {
-		[sheet showFromBarButtonItem:[self startOverButtonItem] animated:YES];
-	} else {
-		[sheet showInView:[[self view] window]]; // all other show methods ignore [actionSheetStyle]
-	}
+    UIAlertController* alertController = [UIAlertController
+                                          alertControllerWithTitle:NSLocalizedString(@"SHEETTITLE_RESTART_SHOPPING", nil)
+                                          message:nil
+                                          preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // Add the "Uncheck items" button
+    UIAlertAction* uncheckAction = [UIAlertAction
+                                    actionWithTitle:NSLocalizedString(@"SHEETBUTTON_UNCHECK_SHOPPINGLIST_ITEMS", nil)
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * _Nonnull action) {
+                                        [self resetCompletedItems:sender];
+                                    }];
+    [alertController addAction:uncheckAction];
+    
+    // Add the destructive "Delete checked items" button
+    UIAlertAction* deleteAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"SHEETBUTTON_DELETE_CHECKED_SHOPPINGLIST_ITEMS", nil)
+                                   style:UIAlertActionStyleDestructive
+                                   handler:^(UIAlertAction * _Nonnull action) {
+                                       [self deleteCompletedItems:sender];
+                                   }];
+    [alertController addAction:deleteAction];
+    
+    // Add the cancel button
+    UIAlertAction* cancelAction = [UIAlertAction
+                                   actionWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil)
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
+    [alertController addAction:cancelAction];
+    
+    // On iPad, we need to specify the source of the action sheet
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        if (sender == self.startOverButtonItem) {
+            alertController.popoverPresentationController.barButtonItem = self.startOverButtonItem;
+        } else {
+            alertController.popoverPresentationController.sourceView = self.view;
+            alertController.popoverPresentationController.sourceRect = self.view.bounds;
+        }
+    }
+    
+    // Present the alert controller
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)deleteCompletedItems:(id)sender {
@@ -735,20 +752,20 @@
 
 	self.organizeButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:NSLocalizedString(@"ORGANIZE_BUTTONITEM", nil)
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:self
 		action:@selector(organize:)];
 
 	self.trashButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:NSLocalizedString(@"TRASH_BUTTONITEM", nil)
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:self
 		action:@selector(deleteSelectedItems:)];
 //	self.trashButtonItem.tintColor = [UIColor redTintColor];
 
 	self.startOverButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:NSLocalizedString(@"STARTOVER_BUTTONITEM", nil)
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:self
 		action:@selector(startOver:)];
 
@@ -756,7 +773,7 @@
 
 	self.selectItemsButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:NSLocalizedString(@"SELECTALL_BUTTONITEM", nil)
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:self
 		action:@selector(selectAllItems:)];
 	self.selectItemsButtonItem.possibleTitles = [NSSet setWithArray:@[ NSLocalizedString(@"SELECTALL_BUTTONITEM", nil), NSLocalizedString(@"DESELECTALL_BUTTONITEM", nil) ]];

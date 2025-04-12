@@ -22,13 +22,13 @@
 // SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface UIActionSheet(Additions)
-
-- (void)addButtonWithTitle:(NSString*)title block:(void (^)())block;
-
-- (void)setCancelButtonWithTitle:(NSString*)title block:(void (^)())block;
-- (void)setDestructiveButtonWithTitle:(NSString*)title block:(void (^)())block;
-
-@end
+//#import <UIKit/UIKit.h>
+//
+//@interface UIActionSheet(Additions)
+//
+//- (void)addButtonWithTitle:(NSString*)title block:(void (^)())block;
+//
+//- (void)setCancelButtonWithTitle:(NSString*)title block:(void (^)())block;
+//- (void)setDestructiveButtonWithTitle:(NSString*)title block:(void (^)())block;
+//
+//@end

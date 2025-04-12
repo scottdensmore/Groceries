@@ -27,7 +27,7 @@
 #import "GRCArchiver.h"
 
 #import "NSString+Additions.h"
-#import <zipzap/zipzap.h>
+#import <ZipZap/ZipZap.h>
 
 @interface GRCZIPUnarchiver()
 
@@ -64,7 +64,8 @@
 }
 
 - (BOOL)unarchiveWithOptions:(NSDictionary*)options error:(NSError* __autoreleasing *)error {
-	ZZArchive* archive = [ZZArchive archiveWithContentsOfURL:[self archiveURL]];
+    ZZArchive *archive = [ZZArchive archiveWithURL:[self archiveURL] error:error];
+//	ZZArchive* archive = [ZZArchive archiveWithContentsOfURL:[self archiveURL]];
 	if(!archive) { return NO; }
 
 	for(ZZArchiveEntry* entry in archive.entries) {
@@ -137,8 +138,9 @@
 }
 
 - (id)unarchiveJSONObjectFromEntry:(ZZArchiveEntry*)entry options:(NSJSONReadingOptions)options error:(NSError* __autoreleasing *)error {
-	NSData* data = [entry data];
-
+	NSData* data = [entry newDataWithError:error];
+    if(*error) { return nil; }
+    
 	options |= NSJSONReadingAllowFragments;
 
 	id object = [NSJSONSerialization JSONObjectWithData:data options:options error:error];
