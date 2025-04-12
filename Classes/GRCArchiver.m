@@ -27,7 +27,7 @@
 
 #import "NSString+SQL.h"
 
-#import <zipzap/zipzap.h>
+#import <ZipZap/ZipZap.h>
 
 NSString* const GRCShoppingListDocumentExtension = @"groceries";
 
@@ -65,7 +65,7 @@ NSString* const GRCShoppingListDocumentExtension = @"groceries";
 	[fileManager createDirectoryAtURL:[archiveURL URLByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:nil];
 
 	// make a new archive
-	ZZMutableArchive* archive = [ZZMutableArchive archiveWithContentsOfURL:archiveURL];
+	ZZArchive* archive = [ZZArchive archiveWithURL:archiveURL error:error];
 
 	NSArray* entries = @[
 		[ZZArchiveEntry archiveEntryWithFileName:@"payload" compress:YES dataBlock:^NSData*(NSError** error) {

@@ -98,7 +98,7 @@ static NSInteger const AisleSectionIndex = 1;
 	if(self.showsSelectionIndicator) {
 		self.insertAisleButtonItem = [[UIBarButtonItem alloc]
 			initWithTitle:NSLocalizedString(@"NEWAISLE_BUTTONITEM", nil)
-			style:UIBarButtonItemStyleBordered
+			style:UIBarButtonItemStylePlain
 			target:self
 			action:@selector(insertAisle:)];
 

@@ -205,26 +205,52 @@
 }
 
 - (void)presentCopyAndMoveSheet:(id)sender {
-	UIActionSheet* sheet = [[UIActionSheet alloc]
-		initWithTitle:nil
-		delegate:nil
-		cancelButtonTitle:nil
-		destructiveButtonTitle:nil
-		otherButtonTitles:nil];
-
-	[sheet addButtonWithTitle:NSLocalizedString(@"COPY_BUTTONITEM", nil) block:^() {
-		[self notifiyDelegateAboutActionIfNeeded:GRCShoppingListOrganizerActionCopy];
-	}];
-
-	[sheet addButtonWithTitle:NSLocalizedString(@"MOVE_BUTTONITEM", nil) block:^() {
-		[self notifiyDelegateAboutActionIfNeeded:GRCShoppingListOrganizerActionMove];
-	}];
-
-	[sheet setCancelButtonWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil) block:^() {
-		[self deselectContentTableViewSelectionIfNeededAnimated:YES];
-	}];
-
-	[sheet showInView:[self view]];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                             message:nil
+                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // Add Copy button
+    UIAlertAction* copyAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"COPY_BUTTONITEM", nil)
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self notifiyDelegateAboutActionIfNeeded:GRCShoppingListOrganizerActionCopy];
+                                                       }];
+    [alertController addAction:copyAction];
+    
+    // Add Move button
+    UIAlertAction* moveAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"MOVE_BUTTONITEM", nil)
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           [self notifiyDelegateAboutActionIfNeeded:GRCShoppingListOrganizerActionMove];
+                                                       }];
+    [alertController addAction:moveAction];
+    
+    // Add Cancel button
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"CANCEL_BUTTONITEM", nil)
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             [self deselectContentTableViewSelectionIfNeededAnimated:YES];
+                                                         }];
+    [alertController addAction:cancelAction];
+    
+    // For iPad support - set the source for the popover
+    UIPopoverPresentationController *popover = alertController.popoverPresentationController;
+    if (popover) {
+        if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+            popover.barButtonItem = sender;
+        } else if ([sender isKindOfClass:[UIView class]]) {
+            popover.sourceView = (UIView *)sender;
+            popover.sourceRect = [(UIView *)sender frame];
+        } else {
+            popover.sourceView = self.view;
+            popover.sourceRect = CGRectMake(CGRectGetMidX(self.view.bounds),
+                                            CGRectGetMidY(self.view.bounds),
+                                            0, 0);
+        }
+    }
+    
+    // Present the alert controller
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)notifiyDelegateAboutActionIfNeeded:(GRCShoppingListOrganizerAction)action {

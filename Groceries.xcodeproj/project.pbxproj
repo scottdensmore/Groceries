@@ -11,6 +11,7 @@
 		1E1AC1DA135C5DAE00C515FA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1AC1D9135C5DAE00C515FA /* Security.framework */; };
 		1E2598841288661100D5E854 /* SUIEditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2598821288661100D5E854 /* SUIEditableTableViewCell.m */; };
 		1EEC684412AD3BE2000A3D29 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEC684312AD3BE2000A3D29 /* SystemConfiguration.framework */; };
+		DEB263A52DAAF09300EF5EB9 /* ZipZap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE24F1082DA209F800C25D31 /* ZipZap.framework */; };
 		EC088AC70F0FC0FB0092C71C /* NSLocale+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = EC088AC50F0FC0FB0092C71C /* NSLocale+Additions.m */; };
 		EC0E14751611F14500ED23F3 /* GRCShoppingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E14741611F14500ED23F3 /* GRCShoppingListViewController.m */; };
 		EC0E147B1611FC4200ED23F3 /* GRCShoppingListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0E147A1611FC4200ED23F3 /* GRCShoppingListItemCell.m */; };
@@ -299,15 +300,6 @@
 		ECC0F642165235BA00124526 /* GRCBarcodeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC0F641165235BA00124526 /* GRCBarcodeFormatter.m */; };
 		ECC17B09162EB84500A963E5 /* GRCAisleImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC17B08162EB84500A963E5 /* GRCAisleImageCollectionViewCell.m */; };
 		ECC30290169EDF2700051F48 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC3028F169EDF2700051F48 /* CoreText.framework */; };
-		ECC302A5169EDFC200051F48 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC30293169EDFC200051F48 /* AFHTTPClient.m */; };
-		ECC302A6169EDFC200051F48 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC30295169EDFC200051F48 /* AFHTTPRequestOperation.m */; };
-		ECC302A7169EDFC200051F48 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC30297169EDFC200051F48 /* AFImageRequestOperation.m */; };
-		ECC302A8169EDFC200051F48 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC30299169EDFC200051F48 /* AFJSONRequestOperation.m */; };
-		ECC302A9169EDFC200051F48 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3029B169EDFC200051F48 /* AFNetworkActivityIndicatorManager.m */; };
-		ECC302AA169EDFC200051F48 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3029E169EDFC200051F48 /* AFPropertyListRequestOperation.m */; };
-		ECC302AB169EDFC200051F48 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC302A0169EDFC200051F48 /* AFURLConnectionOperation.m */; };
-		ECC302AC169EDFC200051F48 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC302A2169EDFC200051F48 /* AFXMLRequestOperation.m */; };
-		ECC302AD169EDFC200051F48 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC302A4169EDFC200051F48 /* UIImageView+AFNetworking.m */; };
 		ECC3845F1696FB8100FA1D51 /* GRCAisleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3845E1696FB8100FA1D51 /* GRCAisleStore.m */; };
 		ECC38466169716A600FA1D51 /* GRCUnitStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC38465169716A500FA1D51 /* GRCUnitStore.m */; };
 		ECC3846A169723DF00FA1D51 /* GRCDefaultStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC38469169723DF00FA1D51 /* GRCDefaultStore.m */; };
@@ -333,7 +325,6 @@
 		ECE958820F6F97A90099E71A /* GRCAisleDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE958810F6F97A90099E71A /* GRCAisleDetailsViewController.m */; };
 		ECE958880F6F98E60099E71A /* AisleDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECE958870F6F98E60099E71A /* AisleDetailsView.xib */; };
 		ECE959340F6FCC240099E71A /* GRCAisleImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE959330F6FCC240099E71A /* GRCAisleImagePickerViewController.m */; };
-		ECF2465116A0670F00AF12E1 /* libzipzap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF2464C16A066EB00AF12E1 /* libzipzap.a */; };
 		ECF28FAA1610CF6800E15D64 /* GRCShoppingListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF28FA91610CF6800E15D64 /* GRCShoppingListStore.m */; };
 		ECF28FAF1610D11800E15D64 /* GRCShoppingList.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF28FAE1610D11800E15D64 /* GRCShoppingList.m */; };
 		ECF28FB21610D13F00E15D64 /* GRCShoppingListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF28FB11610D13F00E15D64 /* GRCShoppingListItem.m */; };
@@ -347,6 +338,97 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DE24F1072DA209F800C25D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D87BA1F81B3D6DEA00ED7EB3;
+			remoteInfo = "ZipZap (iOS Framework)";
+		};
+		DE24F1092DA209F800C25D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8D140D31B423B1100C411B0;
+			remoteInfo = "ZipZap (macOS Framework)";
+		};
+		DE24F10B2DA209F800C25D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF8624CB1BB7495200C12EEE;
+			remoteInfo = "ZipZap (tvOS Framework)";
+		};
+		DE24F10D2DA209F800C25D31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF8624EF1BB74B1F00C12EEE;
+			remoteInfo = "ZipZap (tvOS Static Library)";
+		};
+		DEB263932DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522391BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+		DEB263952DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522651BBF129200859F49;
+			remoteInfo = "AFNetworking watchOS";
+		};
+		DEB263972DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 299522771BBF136400859F49;
+			remoteInfo = "AFNetworking OS X";
+		};
+		DEB263992DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0A51BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS";
+		};
+		DEB2639B2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C3B1BC2C79500FD3B3E;
+			remoteInfo = "AFNetworking iOS Tests";
+		};
+		DEB2639D2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 298D7C4A1BC2C7B200FD3B3E;
+			remoteInfo = "AFNetworking Mac OS X Tests";
+		};
+		DEB2639F2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2987B0AE1BC408A200179A4C;
+			remoteInfo = "AFNetworking tvOS Tests";
+		};
+		DEB263A12DAAEF7400EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 299522381BBF104D00859F49;
+			remoteInfo = "AFNetworking iOS";
+		};
+		DEB263A32DAAEF7E00EF5EB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D87BA1F71B3D6DEA00ED7EB3;
+			remoteInfo = "ZipZap (iOS Framework)";
+		};
 		EC4615D816F35B5C004075ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC4615D416F35B5C004075ED /* sqlite.xcodeproj */;
@@ -382,13 +464,6 @@
 			remoteGlobalIDString = D899CF96162C5EC100112F49;
 			remoteInfo = zipzapTests;
 		};
-		ECF2464F16A0670500AF12E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D899CFAF162C5EEB00112F49;
-			remoteInfo = "zipzap (iOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -399,6 +474,7 @@
 		1E2598811288661100D5E854 /* SUIEditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUIEditableTableViewCell.h; sourceTree = "<group>"; };
 		1E2598821288661100D5E854 /* SUIEditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUIEditableTableViewCell.m; sourceTree = "<group>"; };
 		1EEC684312AD3BE2000A3D29 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = ../Vendor/AFNetworking/AFNetworking.xcodeproj; sourceTree = "<group>"; };
 		EC088AC50F0FC0FB0092C71C /* NSLocale+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+Additions.m"; sourceTree = "<group>"; };
 		EC088AC60F0FC0FB0092C71C /* NSLocale+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+Additions.h"; sourceTree = "<group>"; };
 		EC0E146B1611ABD500ED23F3 /* GRCShoppingListItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GRCShoppingListItem+Private.h"; sourceTree = "<group>"; };
@@ -780,25 +856,6 @@
 		ECC17B08162EB84500A963E5 /* GRCAisleImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRCAisleImageCollectionViewCell.m; sourceTree = "<group>"; };
 		ECC3028C169EDE1600051F48 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = Vendor/HockeySDK/Vendor/CrashReporter.framework; sourceTree = "<group>"; };
 		ECC3028F169EDF2700051F48 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		ECC30292169EDFC200051F48 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
-		ECC30293169EDFC200051F48 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
-		ECC30294169EDFC200051F48 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		ECC30295169EDFC200051F48 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		ECC30296169EDFC200051F48 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		ECC30297169EDFC200051F48 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
-		ECC30298169EDFC200051F48 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		ECC30299169EDFC200051F48 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
-		ECC3029A169EDFC200051F48 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		ECC3029B169EDFC200051F48 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		ECC3029C169EDFC200051F48 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		ECC3029D169EDFC200051F48 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		ECC3029E169EDFC200051F48 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		ECC3029F169EDFC200051F48 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		ECC302A0169EDFC200051F48 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		ECC302A1169EDFC200051F48 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		ECC302A2169EDFC200051F48 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
-		ECC302A3169EDFC200051F48 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		ECC302A4169EDFC200051F48 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		ECC3845D1696FB8100FA1D51 /* GRCAisleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GRCAisleStore.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		ECC3845E1696FB8100FA1D51 /* GRCAisleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GRCAisleStore.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		ECC38464169716A400FA1D51 /* GRCUnitStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRCUnitStore.h; sourceTree = "<group>"; };
@@ -879,6 +936,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB263A52DAAF09300EF5EB9 /* ZipZap.framework in Frameworks */,
 				ECB71C3516A2116C00EAEBD2 /* CoreLocation.framework in Frameworks */,
 				ECCF29AF16905F650010E2D1 /* CoreMedia.framework in Frameworks */,
 				ECCF29B016905F650010E2D1 /* CoreVideo.framework in Frameworks */,
@@ -897,7 +955,6 @@
 				EC13067C163F27A600BD67DC /* libiconv.dylib in Frameworks */,
 				EC5BB4B3169F2D4C0079F600 /* libz.dylib in Frameworks */,
 				EC5BB4B5169F2D7F0079F600 /* libc++.dylib in Frameworks */,
-				ECF2465116A0670F00AF12E1 /* libzipzap.a in Frameworks */,
 				EC4615DA16F35B6E004075ED /* libsqlite3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1009,6 +1066,20 @@
 				ECC3028C169EDE1600051F48 /* CrashReporter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEB2638A2DAAEF5B00EF5EB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEB263942DAAEF5B00EF5EB9 /* AFNetworking.framework */,
+				DEB263962DAAEF5B00EF5EB9 /* AFNetworking.framework */,
+				DEB263982DAAEF5B00EF5EB9 /* AFNetworking.framework */,
+				DEB2639A2DAAEF5B00EF5EB9 /* AFNetworking.framework */,
+				DEB2639C2DAAEF5B00EF5EB9 /* AFNetworking iOS Tests.xctest */,
+				DEB2639E2DAAEF5B00EF5EB9 /* AFNetworking Mac OS X Tests.xctest */,
+				DEB263A02DAAEF5B00EF5EB9 /* AFNetworking tvOS Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EC0E14721611F11A00ED23F3 /* Shopping List View */ = {
@@ -1606,33 +1677,6 @@
 			name = "Shopping List Picker";
 			sourceTree = "<group>";
 		};
-		ECC30291169EDFC200051F48 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				ECC3029C169EDFC200051F48 /* AFNetworking.h */,
-				ECC30292169EDFC200051F48 /* AFHTTPClient.h */,
-				ECC30293169EDFC200051F48 /* AFHTTPClient.m */,
-				ECC30294169EDFC200051F48 /* AFHTTPRequestOperation.h */,
-				ECC30295169EDFC200051F48 /* AFHTTPRequestOperation.m */,
-				ECC30296169EDFC200051F48 /* AFImageRequestOperation.h */,
-				ECC30297169EDFC200051F48 /* AFImageRequestOperation.m */,
-				ECC30298169EDFC200051F48 /* AFJSONRequestOperation.h */,
-				ECC30299169EDFC200051F48 /* AFJSONRequestOperation.m */,
-				ECC3029A169EDFC200051F48 /* AFNetworkActivityIndicatorManager.h */,
-				ECC3029B169EDFC200051F48 /* AFNetworkActivityIndicatorManager.m */,
-				ECC3029D169EDFC200051F48 /* AFPropertyListRequestOperation.h */,
-				ECC3029E169EDFC200051F48 /* AFPropertyListRequestOperation.m */,
-				ECC3029F169EDFC200051F48 /* AFURLConnectionOperation.h */,
-				ECC302A0169EDFC200051F48 /* AFURLConnectionOperation.m */,
-				ECC302A1169EDFC200051F48 /* AFXMLRequestOperation.h */,
-				ECC302A2169EDFC200051F48 /* AFXMLRequestOperation.m */,
-				ECC302A3169EDFC200051F48 /* UIImageView+AFNetworking.h */,
-				ECC302A4169EDFC200051F48 /* UIImageView+AFNetworking.m */,
-			);
-			name = AFNetworking;
-			path = Vendor/AFNetworking/AFNetworking;
-			sourceTree = SOURCE_ROOT;
-		};
 		ECC302D1169F1FAB00051F48 /* Document Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1762,9 +1806,13 @@
 		ECF2464116A066EB00AF12E1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECF2464A16A066EB00AF12E1 /* libzipzap.a */,
-				ECF2464C16A066EB00AF12E1 /* libzipzap.a */,
-				ECF2464E16A066EB00AF12E1 /* zipzapTests.octest */,
+				DE24F1082DA209F800C25D31 /* ZipZap.framework */,
+				ECF2464C16A066EB00AF12E1 /* libZipZap.a */,
+				DE24F10A2DA209F800C25D31 /* ZipZap.framework */,
+				ECF2464A16A066EB00AF12E1 /* libZipZap.a */,
+				DE24F10C2DA209F800C25D31 /* ZipZap.framework */,
+				DE24F10E2DA209F800C25D31 /* libZipZap.a */,
+				ECF2464E16A066EB00AF12E1 /* ZipZapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1788,9 +1836,9 @@
 		ECF2BF140E3E09D50000F6CC /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */,
 				EC4615D416F35B5C004075ED /* sqlite.xcodeproj */,
 				ECF2464016A066EB00AF12E1 /* zipzap.xcodeproj */,
-				ECC30291169EDFC200051F48 /* AFNetworking */,
 				EC8FF44016243C4F00AFAFEE /* SQLite */,
 				ECCB362C1614DA3A00E60D2F /* SophiestiKit */,
 				EC885C200EDABDAF00239CF3 /* UI */,
@@ -1869,8 +1917,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				DEB263A42DAAEF7E00EF5EB9 /* PBXTargetDependency */,
+				DEB263A22DAAEF7400EF5EB9 /* PBXTargetDependency */,
 				EC4615EA16F36921004075ED /* PBXTargetDependency */,
-				ECF2465016A0670500AF12E1 /* PBXTargetDependency */,
 			);
 			name = Groceries;
 			productName = Groceries;
@@ -1887,7 +1936,7 @@
 				ORGANIZATIONNAME = "Sophia Teutschler";
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = PRM99FV87L;
+						DevelopmentTeam = 27ZDER873F;
 					};
 				};
 			};
@@ -1915,6 +1964,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = DEB2638A2DAAEF5B00EF5EB9 /* Products */;
+					ProjectRef = DEB263722DAAEF5500EF5EB9 /* AFNetworking.xcodeproj */;
+				},
+				{
 					ProductGroup = EC4615D516F35B5C004075ED /* Products */;
 					ProjectRef = EC4615D416F35B5C004075ED /* sqlite.xcodeproj */;
 				},
@@ -1931,6 +1984,83 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		DE24F1082DA209F800C25D31 /* ZipZap.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZipZap.framework;
+			remoteRef = DE24F1072DA209F800C25D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE24F10A2DA209F800C25D31 /* ZipZap.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZipZap.framework;
+			remoteRef = DE24F1092DA209F800C25D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE24F10C2DA209F800C25D31 /* ZipZap.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZipZap.framework;
+			remoteRef = DE24F10B2DA209F800C25D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE24F10E2DA209F800C25D31 /* libZipZap.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZipZap.a;
+			remoteRef = DE24F10D2DA209F800C25D31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB263942DAAEF5B00EF5EB9 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = DEB263932DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB263962DAAEF5B00EF5EB9 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = DEB263952DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB263982DAAEF5B00EF5EB9 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = DEB263972DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB2639A2DAAEF5B00EF5EB9 /* AFNetworking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AFNetworking.framework;
+			remoteRef = DEB263992DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB2639C2DAAEF5B00EF5EB9 /* AFNetworking iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking iOS Tests.xctest";
+			remoteRef = DEB2639B2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB2639E2DAAEF5B00EF5EB9 /* AFNetworking Mac OS X Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking Mac OS X Tests.xctest";
+			remoteRef = DEB2639D2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEB263A02DAAEF5B00EF5EB9 /* AFNetworking tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AFNetworking tvOS Tests.xctest";
+			remoteRef = DEB2639F2DAAEF5B00EF5EB9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		EC4615D916F35B5C004075ED /* libsqlite3.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1938,24 +2068,24 @@
 			remoteRef = EC4615D816F35B5C004075ED /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		ECF2464A16A066EB00AF12E1 /* libzipzap.a */ = {
+		ECF2464A16A066EB00AF12E1 /* libZipZap.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libzipzap.a;
+			path = libZipZap.a;
 			remoteRef = ECF2464916A066EB00AF12E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		ECF2464C16A066EB00AF12E1 /* libzipzap.a */ = {
+		ECF2464C16A066EB00AF12E1 /* libZipZap.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libzipzap.a;
+			path = libZipZap.a;
 			remoteRef = ECF2464B16A066EB00AF12E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		ECF2464E16A066EB00AF12E1 /* zipzapTests.octest */ = {
+		ECF2464E16A066EB00AF12E1 /* ZipZapTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = zipzapTests.xctest;
+			path = ZipZapTests.xctest;
 			remoteRef = ECF2464D16A066EB00AF12E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -2275,15 +2405,6 @@
 				ECC38466169716A600FA1D51 /* GRCUnitStore.m in Sources */,
 				ECC3846A169723DF00FA1D51 /* GRCDefaultStore.m in Sources */,
 				ECB2F34E17D753B60025E8C5 /* GRCLaunchViewController.m in Sources */,
-				ECC302A5169EDFC200051F48 /* AFHTTPClient.m in Sources */,
-				ECC302A6169EDFC200051F48 /* AFHTTPRequestOperation.m in Sources */,
-				ECC302A7169EDFC200051F48 /* AFImageRequestOperation.m in Sources */,
-				ECC302A8169EDFC200051F48 /* AFJSONRequestOperation.m in Sources */,
-				ECC302A9169EDFC200051F48 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				ECC302AA169EDFC200051F48 /* AFPropertyListRequestOperation.m in Sources */,
-				ECC302AB169EDFC200051F48 /* AFURLConnectionOperation.m in Sources */,
-				ECC302AC169EDFC200051F48 /* AFXMLRequestOperation.m in Sources */,
-				ECC302AD169EDFC200051F48 /* UIImageView+AFNetworking.m in Sources */,
 				EC5BB4B9169F2EB40079F600 /* GRCShoppingListActivityItemProvider.m in Sources */,
 				ECAD907817CCD81100117B12 /* GRCAisleColorizer.m in Sources */,
 				EC5BB4BD169F335C0079F600 /* GRCArchiver.m in Sources */,
@@ -2299,15 +2420,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DEB263A22DAAEF7400EF5EB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AFNetworking iOS";
+			targetProxy = DEB263A12DAAEF7400EF5EB9 /* PBXContainerItemProxy */;
+		};
+		DEB263A42DAAEF7E00EF5EB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ZipZap (iOS Framework)";
+			targetProxy = DEB263A32DAAEF7E00EF5EB9 /* PBXContainerItemProxy */;
+		};
 		EC4615EA16F36921004075ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = sqlite;
 			targetProxy = EC4615E916F36921004075ED /* PBXContainerItemProxy */;
-		};
-		ECF2465016A0670500AF12E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "zipzap (iOS)";
-			targetProxy = ECF2464F16A0670500AF12E1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2394,7 +2520,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = PRM99FV87L;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Groceries_Prefix.pch;
@@ -2404,8 +2530,9 @@
 					"$(SRCROOT)/Vendor/sqlite",
 				);
 				INFOPLIST_FILE = "Resources/Groceries-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottdensmore.Groceries;
 				PRODUCT_NAME = GroceriesDebug;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -2421,7 +2548,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = PRM99FV87L;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Groceries_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -2429,8 +2556,9 @@
 					"$(SRCROOT)/Vendor/sqlite",
 				);
 				INFOPLIST_FILE = "Resources/Groceries-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottdensmore.Groceries;
 				PRODUCT_NAME = GroceriesBeta;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -2450,6 +2578,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -2469,6 +2598,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PROVISIONING_PROFILE = "D3C0F3BD-7ABB-4225-88A4-5C9D234E8CDC";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -2488,6 +2618,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "CONFIGURATION_$(CONFIGURATION)";
 				GCC_WARN_UNKNOWN_PRAGMAS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PROVISIONING_PROFILE = "8F2AE563-DEBE-4140-BB71-9AB84B049970";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -2504,7 +2635,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = PRM99FV87L;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Groceries_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -2512,8 +2643,9 @@
 					"$(SRCROOT)/Vendor/sqlite",
 				);
 				INFOPLIST_FILE = "Resources/Groceries-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.scottdensmore.Groceries;
 				PRODUCT_NAME = Groceries;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

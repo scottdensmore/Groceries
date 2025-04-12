@@ -79,7 +79,7 @@ static NSInteger const StandardUnitsSectionIndex = 1;
 	// button items
 	self.insertUnitButtonItem = [[UIBarButtonItem alloc]
 		initWithTitle:NSLocalizedString(@"NEW_UNIT_BUTTONITEM", nil)
-		style:UIBarButtonItemStyleBordered
+		style:UIBarButtonItemStylePlain
 		target:self
 		action:@selector(insertUnit:)];
 	self.navigationItem.rightBarButtonItem = self.editButtonItem;

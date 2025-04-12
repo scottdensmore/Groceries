@@ -376,7 +376,7 @@
 	NSString* data = [parameters objectForKey:@"data"];
 	
 	if(data) {
-		data = [data stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		data = [data stringByRemovingPercentEncoding];
 
 		NSDictionary* jsonData = [NSJSONSerialization
 			JSONObjectWithData:[data dataUsingEncoding:NSUTF8StringEncoding]
