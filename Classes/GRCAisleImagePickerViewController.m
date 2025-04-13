@@ -44,7 +44,7 @@
 
 - (id)initWithCollectionViewLayout:(UICollectionViewLayout *)layout	{
 	if((self = [super initWithCollectionViewLayout:layout])) {
-		if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
 			self.navigationItem.prompt = NSLocalizedString(@"AISLEIMAGE_PICKER_NAVIGATIONITEM_PROMPT", @"");
 		} else {
 			self.navigationItem.title = NSLocalizedString(@"AISLEIMAGE_PICKER_NAVIGATIONITEM_PROMPT", @"");
@@ -73,7 +73,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+	if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
 		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
 	}
 	

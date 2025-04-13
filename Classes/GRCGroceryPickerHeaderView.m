@@ -173,7 +173,8 @@
 }
 
 - (void)hideMenuIfNeeded {
-	[[UIMenuController sharedMenuController] setMenuVisible:NO animated:NO];
+//	[[UIMenuController sharedMenuController] setMenuVisible:NO animated:NO];
+    [[UIMenuController sharedMenuController] hideMenuFromView:self];
 }
 
 @end
