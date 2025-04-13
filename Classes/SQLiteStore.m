@@ -173,7 +173,8 @@
 }
 
 - (void)close {
-	sqlite3_close(_handle), _handle = NULL;
+    sqlite3_close(_handle);
+    _handle = NULL;
 }
 
 - (BOOL)attachContentsOfURL:(NSURL*)URL alias:(NSString*)alias error:(NSError* __autoreleasing *)error {

@@ -135,6 +135,7 @@
 
 	[[self sqliteStore] commitTransaction];
 	[self finalizeSQLiteStore];
+    return YES;
 }
 
 #pragma mark Aisles

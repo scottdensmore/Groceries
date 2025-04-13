@@ -469,7 +469,8 @@
 	[[self class] cancelPreviousPerformRequestsWithTarget:self
 		selector:@selector(scheduleDeleteLastCharacterTimer:)
 		object:sender];
-	[[self deleteBackwardButtonTimer] invalidate], self.deleteBackwardButtonTimer = nil;
+    [[self deleteBackwardButtonTimer] invalidate];
+    self.deleteBackwardButtonTimer = nil;
 }
 
 - (void)scheduleDeleteLastCharacterTimer:(id)sender {
