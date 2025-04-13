@@ -263,7 +263,7 @@
     [alertController addAction:cancelAction];
     
     // On iPad, we need to specify the source of the action sheet
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         if (sender == self.startOverButtonItem) {
             alertController.popoverPresentationController.barButtonItem = self.startOverButtonItem;
         } else {
@@ -364,11 +364,11 @@
 		name:UIApplicationWillTerminateNotification
 		object:nil];
 
-	[[NSNotificationCenter defaultCenter]
-		addObserver:self
-		selector:@selector(statusBarFrameDidChange:)
-		name:UIApplicationDidChangeStatusBarFrameNotification
-		object:nil];
+//	[[NSNotificationCenter defaultCenter]
+//		addObserver:self
+//		selector:@selector(statusBarFrameDidChange:)
+//		name:UIApplicationDidChangeStatusBarFrameNotification
+//		object:nil];
 
 	[self loadPickerButton];
 	[self loadButtonItems];
@@ -378,6 +378,18 @@
 	[self setTableHeaderFooterViewsVisible:YES animated:NO];
 
 	self.title = self.shoppingList.title; // in case the shopping list was set earlier
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        // Add code here that you would have put in your statusBarFrameDidChange: method
+        // Update layouts or perform any other adjustments needed when the status bar changes
+        [self updateCoachMarks];
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        // Optional: Code to execute after the transition completes
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -708,9 +720,9 @@
 
 #pragma mark - UIApplicationDidChangeStatusBarFrameNotification
 
-- (void)statusBarFrameDidChange:(NSNotification*)notification {
-	[self updateCoachMarks];
-}
+//- (void)statusBarFrameDidChange:(NSNotification*)notification {
+//	[self updateCoachMarks];
+//}
 
 #pragma mark - UIApplicationDidEnterBackgroundNotification
 

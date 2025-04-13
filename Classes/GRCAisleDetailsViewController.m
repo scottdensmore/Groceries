@@ -103,7 +103,7 @@
 	aisleImagePicker.selectedImage = self.selectedImage;
 	aisleImagePicker.delegate = self;
 	
-	if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+	if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
 		UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:aisleImagePicker];
 		[self presentViewController:navigationController animated:YES completion:nil];
 	} else {
@@ -116,7 +116,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
 	
 	self.contentCell.backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
 	self.contentCell.selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];

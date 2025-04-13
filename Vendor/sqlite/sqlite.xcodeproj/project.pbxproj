@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -90,7 +90,7 @@
 				ORGANIZATIONNAME = "Sophia Teutschler";
 			};
 			buildConfigurationList = EC4615B216F35965004075ED /* Build configuration list for PBXProject "sqlite" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

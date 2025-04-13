@@ -38,6 +38,7 @@ FOUNDATION_EXPORT const unsigned char AFNetworkingVersionString[];
 #import <AFNetworking/AFURLRequestSerialization.h>
 #import <AFNetworking/AFURLResponseSerialization.h>
 #import <AFNetworking/AFSecurityPolicy.h>
+#import <AFNetworking/AFCompatibilityMacros.h>
 
 #if !TARGET_OS_WATCH
 #import <AFNetworking/AFNetworkReachabilityManager.h>
@@ -59,7 +60,7 @@ FOUNDATION_EXPORT const unsigned char AFNetworkingVersionString[];
 #if TARGET_OS_IOS
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 #import <AFNetworking/UIRefreshControl+AFNetworking.h>
-#import <AFNetworking/UIWebView+AFNetworking.h>
+#import <AFNetworking/WKWebView+AFNetworking.h>
 #endif
 
 
