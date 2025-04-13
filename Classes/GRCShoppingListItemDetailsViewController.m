@@ -185,6 +185,7 @@
 		return cell;
 	}
 
+    
 	if([self isQuantityIndexPath:indexPath]) {
 		UITableViewCell* cell = [tableView
 			dequeueReusableCellWithIdentifier:[[self class] quantityCellIdentifier]
