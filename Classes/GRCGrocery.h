@@ -26,7 +26,7 @@
 
 @class GRCUnit;
 
-NSUInteger const GRCGroceryInvalidDatabaseIdentifier;
+extern NSUInteger const GRCGroceryInvalidDatabaseIdentifier;
 
 @interface GRCGrocery : NSObject<NSCoding>
 

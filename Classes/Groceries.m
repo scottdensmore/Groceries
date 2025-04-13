@@ -157,10 +157,18 @@ NSString* const GRCSelectedShoppingListUserDefaultsKey = @"GRCSelectedShoppingLi
 	// TODO:
 }
 
-- (BOOL)application:(UIApplication*)application openURL:(NSURL*)URL sourceApplication:(NSString*)sourceApplication annotation:(id)annotation {
-	if([self importGroceriesFromURLIfNeeded:URL]) { return YES; }
-	
-	return NO;
+//- (BOOL)application:(UIApplication*)application openURL:(NSURL*)URL sourceApplication:(NSString*)sourceApplication annotation:(id)annotation {
+//    if([self importGroceriesFromURLIfNeeded:URL]) { return YES; }
+//    
+//    return NO;
+//}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    if ([self importGroceriesFromURLIfNeeded:url]) {
+        return YES;
+    }
+    
+    return NO;
 }
 
 #pragma mark - UINavigationControllerDelegate

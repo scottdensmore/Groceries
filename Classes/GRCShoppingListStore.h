@@ -29,15 +29,15 @@
 @class GRCAisle;
 @class GRCUnit;
 
-NSString* const GRCShoppingListStoreUnitDidChangeNotification;
-NSString* const GRCShoppingListStoreAisleDidChangeNotification;
+extern NSString* const GRCShoppingListStoreUnitDidChangeNotification;
+extern NSString* const GRCShoppingListStoreAisleDidChangeNotification;
 
-NSString* const GRCShoppingListStoreLocaleDidChangeNotification;
-NSString* const GRCShoppingListStoreLocaleKey;
+extern NSString* const GRCShoppingListStoreLocaleDidChangeNotification;
+extern NSString* const GRCShoppingListStoreLocaleKey;
 
-NSString* const GRCShoppingListDidSaveItemNotification;
-NSString* const GRCShoppingListDidDeleteItemNotification;
-NSString* const GRCShoppingListItemKey;
+extern NSString* const GRCShoppingListDidSaveItemNotification;
+extern NSString* const GRCShoppingListDidDeleteItemNotification;
+extern NSString* const GRCShoppingListItemKey;
 
 typedef NS_ENUM(NSInteger, GRCShoppingListStoreAuthorizationStatus) {
     GRCShoppingListStoreAuthorizationStatusNotDetermined = 0,

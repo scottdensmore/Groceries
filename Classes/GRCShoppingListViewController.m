@@ -1543,7 +1543,7 @@
 //		[[tableView layer] addAnimation:transition forKey:@"updateTransition"];
 //	}
 
-	void (^animations)() = ^() {
+    void (^animations)(void) = ^() {
 		if(animated) { // to fade the content view
 			CATransition* transition = [CATransition animation];
 			[[tableView layer] addAnimation:transition forKey:@"updateTransition"];

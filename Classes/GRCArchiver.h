@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-NSString* const GRCShoppingListDocumentExtension;
+extern NSString* const GRCShoppingListDocumentExtension;
 
 @interface GRCArchiver : NSObject
 

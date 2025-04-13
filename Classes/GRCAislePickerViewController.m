@@ -420,7 +420,7 @@ static NSInteger const AisleSectionIndex = 1;
 	UITableView* tableView = self.tableView;
 	NSArray* indexPathsForVisibleRows = tableView.indexPathsForVisibleRows;
 
-	void (^animations)() = ^() {
+    void (^animations)(void) = ^() {
 		for(NSIndexPath* indexPath in indexPathsForVisibleRows) {
 			if(indexPath.section != AisleSectionIndex) { continue; }
 

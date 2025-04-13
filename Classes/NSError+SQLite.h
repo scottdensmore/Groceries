@@ -27,7 +27,7 @@
 
 extern NSString* const SQLiteErrorDomain;
 
-NS_ENUM(NSUInteger, SQLiteError) {
+extern NS_ENUM(NSUInteger, SQLiteError) {
 	SQLiteErrorUnknown = SQLITE_ERROR,
 	SQLiteErrorInternal = SQLITE_INTERNAL,
 	SQLiteErrorBusy = SQLITE_BUSY,

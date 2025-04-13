@@ -141,13 +141,13 @@
 			continue;
 		}
 		
-		if([regex firstMatchInString:string options:0 range:range]) {
-			return [regex
-				stringByReplacingMatchesInString:string
-				options:NSRegularExpressionCaseInsensitive
-				range:range
-				withTemplate:replacementString];
-		}
+        if([regex firstMatchInString:string options:0 range:range]) {
+            return [regex
+                    stringByReplacingMatchesInString:string
+                    options:0  // Use the same options as in the firstMatchInString call for consistency
+                    range:range
+                    withTemplate:replacementString];
+        }
 	}
     
 	return string;

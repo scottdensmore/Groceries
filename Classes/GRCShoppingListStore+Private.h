@@ -33,7 +33,7 @@
 #import "GRCAisleStore.h"
 #import "GRCUnitStore.h"
 
-NSString* const GRCShoppingListStoreDidReceiveExternalChangeNotification;
+extern NSString* const GRCShoppingListStoreDidReceiveExternalChangeNotification;
 
 @interface GRCShoppingListStore()
 

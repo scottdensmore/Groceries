@@ -25,8 +25,8 @@
 #import <Foundation/Foundation.h>
 #import "SQLiteStore.h"
 
-NSInteger const GRCCurrentDefaultStoreVersion;
-NSInteger const GRCDefaultStoreVersion300;
+extern NSInteger const GRCCurrentDefaultStoreVersion;
+extern NSInteger const GRCDefaultStoreVersion300;
 
 @interface GRCStoreMigration : NSObject
 
