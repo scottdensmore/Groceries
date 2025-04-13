@@ -26,9 +26,9 @@
 
 @class GRCShoppingListStore;
 
-NSString* const GRCAisleImageNameGeneric;
+extern NSString* const GRCAisleImageNameGeneric;
 
-NSUInteger const GRCAisleInvalidDatabaseIdentifier;
+extern NSUInteger const GRCAisleInvalidDatabaseIdentifier;
 
 @interface GRCAisle : NSObject<NSCoding>
 

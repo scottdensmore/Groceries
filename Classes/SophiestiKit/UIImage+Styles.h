@@ -35,21 +35,21 @@
 @end
 
 // standard styles
-NSString* const SUIGroupedTableViewHeaderImageStyle;
+extern NSString* const SUIGroupedTableViewHeaderImageStyle;
 
-NSString* const SUITableViewCellImageStyle;
-NSString* const SUITableViewCellDarkImageStyle;
-NSString* const SUITableViewCellSelectedImageStyle;
-NSString* const SUITableViewCellGrayImageStyle;
-NSString* const SUITableViewCellBlueImageStyle;
+extern NSString* const SUITableViewCellImageStyle;
+extern NSString* const SUITableViewCellDarkImageStyle;
+extern NSString* const SUITableViewCellSelectedImageStyle;
+extern NSString* const SUITableViewCellGrayImageStyle;
+extern NSString* const SUITableViewCellBlueImageStyle;
 
-NSString* const SUIToolbarItemImageStyle;
+extern NSString* const SUIToolbarItemImageStyle;
 
 // style attributes
-NSString* const SUIImageStyleFillColor; // UIColor
+extern NSString* const SUIImageStyleFillColor; // UIColor
 
-NSString* const SUIImageStyleShadowColor; // UIColor
-NSString* const SUIImageStyleShadowOffset; // CGPoint in NSValue
+extern NSString* const SUIImageStyleShadowColor; // UIColor
+extern NSString* const SUIImageStyleShadowOffset; // CGPoint in NSValue
 
-NSString* const SUIImageStyleFillStartColor; // UIColor
-NSString* const SUIImageStyleFillEndColor; // UIColor
+extern NSString* const SUIImageStyleFillStartColor; // UIColor
+extern NSString* const SUIImageStyleFillEndColor; // UIColor

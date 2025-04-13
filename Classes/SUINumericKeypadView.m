@@ -109,7 +109,7 @@
 	}
 
 	// clear button
-	if(NO) {
+    if(/* DISABLES CODE */ (NO)) {
 		UIButton* clearButton = [self newClearKeypadButton];
 	
 		[clearButton addTarget:self action:@selector(buttonTappedDown:event:) forControlEvents:UIControlEventTouchDown];

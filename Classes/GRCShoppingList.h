@@ -28,7 +28,7 @@
 @class GRCShoppingListStore;
 @class GRCShoppingListItem;
 
-NSUInteger const GRCShoppingListInvalidDatabaseIdentifier;
+extern NSUInteger const GRCShoppingListInvalidDatabaseIdentifier;
 
 @interface GRCShoppingList : NSObject<NSCoding>
 

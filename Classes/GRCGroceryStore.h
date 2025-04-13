@@ -49,8 +49,8 @@
 
 @end
 
-NSString* const GRCGroceryStoreAutocompletionScopeGenerics;
-NSString* const GRCGroceryStoreAutocompletionScopeBrands;
+extern NSString* const GRCGroceryStoreAutocompletionScopeGenerics;
+extern NSString* const GRCGroceryStoreAutocompletionScopeBrands;
 
 @interface GRCGroceryStore(Autocompletion)
 

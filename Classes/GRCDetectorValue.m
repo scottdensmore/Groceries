@@ -114,7 +114,7 @@
 	
 	if(tag) {
 		range = [[tag objectForKey:@"range"] rangeValue];
-	} else if(NO) { // TODO: 
+    } else if(/* DISABLES CODE */ (NO)) { // TODO: 
 		// insert a whitespace in front of the title
 		NSRange titleRange = [self.tags[@"title"][@"range"] rangeValue];
 		

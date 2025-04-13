@@ -24,14 +24,14 @@
 
 #import <UIKit/UIKit.h>
 
-NSString* const SUIFormViewControllerObjectKey;
-NSString* const SUIFormViewControllerPropertyKey;
-NSString* const SUIFormViewControllerDisplayPropertyKey;
-NSString* const SUIFormViewControllerPlaceholderKey;
-NSString* const SUIFormViewControllerMandatoryKey;
-NSString* const SUIFormViewControllerUserInfoKey;
-NSString *const SUIFormViewControllerAutoCapitalizationTypeKey;
-NSString *const SUIFormViewControllerAutoCorrectionTypeKey;
+extern NSString* const SUIFormViewControllerObjectKey;
+extern NSString* const SUIFormViewControllerPropertyKey;
+extern NSString* const SUIFormViewControllerDisplayPropertyKey;
+extern NSString* const SUIFormViewControllerPlaceholderKey;
+extern NSString* const SUIFormViewControllerMandatoryKey;
+extern NSString* const SUIFormViewControllerUserInfoKey;
+extern NSString *const SUIFormViewControllerAutoCapitalizationTypeKey;
+extern NSString *const SUIFormViewControllerAutoCorrectionTypeKey;
 
 @protocol SUIFormViewControllerDelegate;
 

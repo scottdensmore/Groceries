@@ -30,4 +30,4 @@
 
 @end
 
-NSString* const GRCGroceriesURLScheme;
+extern NSString* const GRCGroceriesURLScheme;

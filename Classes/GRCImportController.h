@@ -25,8 +25,8 @@
 #import <Foundation/Foundation.h>
 #import "GRCImporter.h"
 
-NSString* const GRCImportControllerWillStartImportingNotification;
-NSString* const GRCImportControllerDidFinishImportingNotification;
+extern NSString* const GRCImportControllerWillStartImportingNotification;
+extern NSString* const GRCImportControllerDidFinishImportingNotification;
 
 @interface GRCImportController : NSObject
 
